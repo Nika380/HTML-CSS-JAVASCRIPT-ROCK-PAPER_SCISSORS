@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <script src="./rps.js" defer></script>
+    <link rel="stylesheet" href="./rps.css">
+</head>
+<body>
+    <div class="startgame" id="startGame">
+        <div class="startContent">
+            <h1 class="winScore">Choose Winning Score?</h1>
+            <select name="select" id="select" class="select">
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+            </select>
+            <button id="start" class="start">Start Game</button>
+        </div>
+    </div>
+    <div class="scores">
+        <h1 class="player">Player: <span id="pl"></span></h1>
+        <h1 class="computer">Computer: <span id="com"></span></h1>
+    </div>
+    <div class="main">
+        <h1 class="tit"><span class="r">Rock</span><span class="p">Paper</span><span class="s">Scissors</span> <span class="and">&</span></h1>
+    </div>
+    <div class="game">
+        <h2 class="some">Computer Choice: <span id="computer-choice"></span></h2>
+    <h2>Your Chouce: <span id="your-choice"></span></h2>
+    <h2>Result: <span id="result"></span></h2>
+
+    <div class="buttons">
+        <button class="btn" id="Rock"></button>
+        
+        <button class="btn" id="Paper"></button>
+        
+        <button class="btn" id="Scissors"></button>
+        
+    </div>
+    <div class="titles">
+        <h1 class="rock">Rock</h1>
+        <h1 class="paper">Paper</h1>
+        <h1 class="scissors">Scissors</h1>
+    </div>
+    </div>
+    <div class="loader" id="loader">
+        <div class="images">
+            <img src="./rock-removebg-preview.png" alt="" class="ro">
+            <img src="./paper-removebg-preview.png" alt="" class="pa">
+            <img src="./scissors-removebg-preview.png" alt="" class="sc">
+        </div>
+    </div>
+    <div class="winlose" id="winlose">
+        <h1 class="endgame" id="endgame">YOU WIN</h1>
+        <div class="endButtons">
+            <button class="playagain endbtn" id="playagain">Play Again</button>
+            <button class="newscore endbtn" id="newscore">Set New Score</button>
+        </div>
+    </div>
+</body>
+</html>

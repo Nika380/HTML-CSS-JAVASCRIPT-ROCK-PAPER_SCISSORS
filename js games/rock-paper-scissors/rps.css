@@ -1,0 +1,347 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+}
+h2, h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+.main{
+    position: absolute;
+    top: 30px;
+}
+.tit{
+    position: relative;
+    left: 100px;
+    width: 400px;
+}
+.and{
+    position: absolute;
+    left: 80px;
+    top: 25px;
+}
+.p{
+    margin-left: 50px;
+}
+.s{
+    position: absolute;
+    left: 40px;
+    top: 60px;
+}
+.game{
+    width: 500px;
+    height: 200px;
+    border: 4px solid white;
+    height: 350px;
+    padding: 40px;
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9.5px );
+    -webkit-backdrop-filter: blur( 9.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+h2{
+    margin-top: 12px;
+}
+.buttons{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    top: 40px;
+    width: 400px;
+    margin-left: 0px;
+}
+button{
+    width: 90px;
+    height: 70px;
+    border: none;
+    background: white;
+}
+#Paper{
+    background-image: url(./paper-removebg-preview.png);
+    background-size: cover;
+    height: 80px;
+}
+#Scissors{
+    background-image: url(./scissors-removebg-preview.png);
+    background-size: cover;
+    margin-top: 10px;
+}
+#Rock{
+    background-image: url(./rock-removebg-preview.png);
+    background-size: cover;
+    height: 85px;
+}
+
+.titles{
+    display: flex;
+    position: relative;
+    top: 50px;
+    justify-content: space-between;
+    margin-left: -30px;
+}
+.rock{
+    margin-left: 50px;
+}
+.scissors{
+    margin-right: 0px;
+}
+/* ------------------------------------------------ Loading Screen ----------------------------------------- */
+.loader{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgb(229, 229, 229);
+    z-index: 100;
+    animation: gone 1s forwards 5s;
+}
+.images{
+    position: relative;
+    width: 550px;
+    height: 400px;
+    margin: auto auto;
+    margin-top: 100px;
+    overflow: hidden;
+}
+.scores{
+    width: 300px;
+    position: absolute;
+    top: 30px;
+    left: 120px;
+}
+.player{
+    color: green;
+}
+.computer{
+    color: red;
+}
+.ro{
+    position: absolute;
+    margin-left: -300px;
+    transform: rotate(-120deg);
+    animation: rock 3s forwards;
+}
+.pa{
+    position: absolute;
+    right: -250px;
+    transform: rotate(360deg);
+    animation: paper 3s forwards 2s;
+}
+.sc{
+    position: absolute;
+    left: 150px;
+    bottom: -400px;
+    transform: rotate(65deg);
+    animation: scis 3s forwards 1s;
+    
+}
+
+/* ---------------------------------------- Start Game ---------------------------------------- */
+
+.startgame{
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    background: black;
+    position: fixed;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.startContent{
+    width: 400px;
+    height: 300px;
+    position: relative;
+    background: rgb(91, 22, 22);
+    padding: 30px;
+    border-radius: 30px;
+    background: rgb(34, 34, 42);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.winScore{
+    color: rgb(255, 255, 255);
+}
+
+.start{
+    position: absolute;
+    font-size: 24px;
+    background: purple;
+    color: green;
+    bottom: 20px;
+    left: 100px;
+    width: 168px;
+    height: 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.5s ease-in-out;
+}
+.start:hover{
+    opacity: 1;
+    font-size: 28px;
+}
+
+
+.select{
+    width: 150px;
+    align-items: center;
+    position: relative;
+    top: 70px;
+    left: 80px;
+    height: 50px;
+    font-size: 40px;
+    border: none;
+}
+option{
+    height: 150px;
+}
+
+
+/* -------------------------------------------   ENDGAME  ------------------------------------ */
+
+.winlose{
+    width: 100%;
+    height: 100%;
+    z-index: 18;
+    background: black;
+    position: fixed;
+    opacity: 0.8;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.endgame{
+    font-size: 50px;
+    color: green;
+}
+.endButtons{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 400px;
+    width: 400px;
+}
+.endbtn{
+    position: relative;
+    width: 160px;
+    font-size: 20px;
+    background: rgb(255, 149, 0);
+    opacity: 0.7;
+    border-radius: 12px;
+}
+.endbtn:hover{
+    font-size: 22px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    opacity: 1;
+}
+
+/* ---------------------------------------- Animations -------------------------------------------- */
+
+@keyframes rock {
+    100%{
+        transform: rotate(0deg);
+        margin-left: 0%;
+    }
+}
+
+@keyframes scis {
+    100%{
+        bottom: 0%;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes paper {
+    100%{
+        right: 0;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes gone {
+    80%{
+        opacity: 0.7;
+    }
+    85%{
+        opacity: 0.5;
+    }
+    90%{
+        opacity: 0.3;
+    }
+    95%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+/* -------------------------- For Phone Design ----------------------------------*/
+
+@media screen and (max-width: 400px) {
+    span{
+        font-size: 17px;
+    }
+    .game{
+        margin-top: 100px;
+        width: 300px;
+        height: 450px;
+    }
+    .buttons{
+        width: 300px;
+        justify-content: space-evenly;
+        margin-left: -30px;
+        margin-top: 60px;
+    }
+    #Rock{
+        width: 70px;
+        height: 65px;
+        
+    }
+    #Paper{
+        width: 70px;
+        height: 65px;
+    }
+    #Scissors{
+        width: 80px;
+        height: 60px;
+    }
+    h1{
+        font-size: 18px;
+    }
+    .titles{
+        margin-left: -50px;
+        width: 300px;
+    }
+    #computer-choice{
+        position: relative;
+        display: block;
+    }
+    #your-choice{
+        position: relative;
+        display: block;
+    }
+    .tit{
+        top: 30px;
+    }
+    .r, .p, .s, .and{
+        font-size: 27px;
+    }
+}
